@@ -42,7 +42,9 @@ function logi_crl(s: 200 | 404 | 500 | 403  | '200'| '403') {
     let statusStr = ''
     if (typeof s === 'number'){
         statusStr = s.toString()
-        //判断s的数据类型 
+        //转换s的数据类型为字符串
+        //const statusNum = typeof s === 'string' ?
+        //statusNum = parseInt(s) : s
     } else {
         statusStr = s
     }
@@ -57,8 +59,8 @@ function logi_crl(s: 200 | 404 | 500 | 403  | '200'| '403') {
         console.log('address redirection')
     }else {
         console.log('unknown error')
-    }
+    } //不用添加意外条件的判断，因为程序中不允许传该参数
 
 }
 
-logi_crl(407)
+logi_crl('200')
