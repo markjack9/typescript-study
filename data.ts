@@ -64,3 +64,20 @@ function logi_crl(s: 200 | 404 | 500 | 403  | '200'| '403') {
 }
 
 logi_crl('200')
+function logi_switch(s: 200 | 404 | 500 | 403  | '200'| '403') {
+    const statusNum = typeof s === 'string' ?
+     parseInt(s) : s
+    switch (statusNum){
+        case 200:
+            console.log('ok')
+            break
+        case 404:
+            console.log('no found')
+            break
+        case 403:
+            console.log('address redirection')
+            break
+    }
+}
+
+logi_switch('200')
