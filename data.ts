@@ -81,3 +81,34 @@ function logi_switch(s: 200 | 404 | 500 | 403  | '200'| '403') {
 }
 
 logi_switch('200')
+
+
+let sum =0
+for (let i =0;i <100; i++){
+    sum += i
+}
+console.log(sum)
+
+let sum2= 0
+let i =1
+while (i <= 100) {
+    sum2 += i
+    i++
+}
+
+console.log(sum2)
+
+
+let sum3 = 0
+
+for (let i =0;i<100;i++){
+    try {
+        sum3 += i
+        if (i % 17 === 0) {
+            throw `bad number ${i}`
+        }
+    } catch (err){
+        console.error(err)
+    }
+}
+console.log(sum3)
