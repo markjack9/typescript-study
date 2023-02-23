@@ -52,5 +52,32 @@ console.log(e.slice(2,5),e.slice(3))
 //数组中的取出元素
 e.splice(3,2)
 console.log(e)
-const deleted = e.splice(3,2,20,30,40)
+//splice进行删除元素，从第三个开始删除两个
+
+const deleted = e.splice(3,2,2,30,40)
+//splice进行删除元素，从第三个开始删除两个，添加3个元素
 console.log(e,'delete',deleted)
+
+console.log('index of 2', e.indexOf(2))
+//从左往右检索数组中的元素2
+console.log('index of 2', e.indexOf(2, 2))
+//索引数组中的元素2，从指定位置检索
+console.log('lastOf of 2',e.lastIndexOf(2))
+//从右往左检索元素2的位置
+
+
+e.sort()
+console.log(e)
+
+const f = [1,2,3]
+const [f1,f2]= f
+console.log(f2,f1)
+//元组
+
+console.log('a,b,c,1,2,3'.split(','))
+//字符串元素转成数组，字符串类型
+
+const g = [1,2,3,4].join(' ')
+//字符串分割为单个元素，使用空格间隔
+console.log(g)
+
